@@ -1,7 +1,7 @@
 <div class="menu">
   <nav class="menu-content">
     {% for item in site.data.settings.menu %}
-      <h3 href="{{ site.github.url }}/{{ item.url }}">{{ item.name }}</h3>
+      <a href="{{ site.github.url }}/{{ item.url }}" style="font-size: 20px;">{{ item.name }}</a>
     {% endfor %}
   </nav>
   <nav class="social-icons">
