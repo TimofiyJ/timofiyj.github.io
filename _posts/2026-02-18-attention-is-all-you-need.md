@@ -141,7 +141,7 @@ of ${\sqrt \frac{1}{d_k}}$. Additive attention computes the compatibility functi
 subspaces at different positions. With a single attention head, averaging inhibits this.
 
 $$
-MultiHead(Q,K,V) = Concat(head_1 ... head_h)W^O \newline
+MultiHead(Q,K,V) = Concat(head_1 ... head_h)W^O \\
 \text{where } head_i = Attention(QW_i^Q, KW _i^K, VW_i^V)
 $$
 
@@ -208,7 +208,7 @@ linear transformation. In the embedding layers weights are multiplied by $\sqrt{
 > 
 > In this work, we use sine and cosine functions of different frequencies:
 $$
-P E(_{pos, 2i}) = sin(pos/1000^{2i/d_{model}}) \newline
+P E(_{pos, 2i}) = sin(pos/1000^{2i/d_{model}}) \\
 P E(_{pos, 2i+1}) = cos(pos/1000^{2i/d_{model}})
 $$
 > Where $pos$ is the position and $i$ is the dimension. That is, each dimension of the positional encoding corresponds to a sinusoid. The wavelengths form a geometric progression from 2π to 10000 · 2π. We chose this function because we hypothesized it would allow the model to easily learn to attend by relative positions, since for any fixed offset $k$, $P E_{pos+k}$ can be represented as a linear function of P $E_{pos}$.
